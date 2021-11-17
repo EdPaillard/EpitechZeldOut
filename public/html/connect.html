@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<title>ZeldOut</title>
+	</head>
+
+	<body class="grey lighten-4">
+		<header class="teal">
+			<nav class="teal">
+		    	<div id="navMain" class="nav-wrapper">
+		      		<a href="index.html" class="brand-logo left"><img src="../images/logo_zeldout.png"/></a>
+		    	</div>
+		  	</nav>	
+		</header>
+
+		<main id="connectMain">
+			<section id="connectSection" class="card-panel">
+				<h4 class="card-title">Identify</h4>
+				<div class="row">
+				    <form class="col s12" action="http://localhost:3000/login" method="POST">
+				      <div class="row">
+				        <div class="input-field col s12">
+				          <input id="email_inline" name="email" type="email" class="validate">
+            			  <label for="email_inline">Email</label>
+            			</div>
+				      </div>
+				      <div class="row">
+				        <div class="input-field col s12">
+				          <input id="password" type="password" name="password" class="validate">
+				          <label for="password">Password</label>
+				        </div>
+				      </div>
+				      <div id="submBtn">
+				      	<button class="btn blue" type="submit">Connexion</button>
+				      </div>
+				    </form>
+				  </div>
+			</section>
+			<p class="center-align">Not yet subscribe ? <a href="inscription.html">Subscribe here !</a></p>
+		</main>
+
+		<footer>
+			<address class="center-align"><a href="mailto:ed.paillard@gmail.com">Contact</a> - Tous droits réservés - Avec l'aimable participation financière du CNC</address>
+		</footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	</body>
+</html>

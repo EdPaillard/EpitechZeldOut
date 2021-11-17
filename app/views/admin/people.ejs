@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="shortcut icon" href="/images/logo_zeldout.ico">
+    <title>ZeldOut</title>
+</head>
+
+<body class="grey lighten-4">
+    <header class="teal">
+        <nav class="teal">
+            <div id="navMain" class="nav-wrapper">
+                <a href="/"><img id="logoZOWP" class="left" src="/images/logo_zeldout.png" alt="Logo ZeldOut"></a>
+                <ul class="right">
+                    <p id="hideout">Page d'administration de ZeldOut, le meilleur réseau professionnel de la Creuse.</p>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section id="adminSection">
+        <h2 id="titleSecAdmin">Utilisateurs</h2>
+        <h5 class='center'><a id="backAdmin" href="/admin">Retour à la page
+                d'administration</a></h5>
+        <% for (let people of peoples) {%>
+        <article class="<%=people.id%>">
+            <form class="adminForm" action="/people/<%=people.id%>" method="POST">
+                <table class="striped centered responsive-table">
+                    <tr class="grey lighten-2">
+                        <th class="teal darken-2">Numéro de l'utilisateur</th>
+                        <td><%=people.id%></td>
+                    </tr>
+                    <tr>
+                        <th class="teal">Prénom</th>
+                        <td><input class="center-align black-text" disabled type="text" name="firstname"
+                                value="<%=people.firstname%>"></td>
+                    </tr>
+                    <tr class="grey lighten-2">
+                        <th class="teal darken-2">Nom</th>
+                        <td><input class="center-align black-text" disabled type="text" name="lastname"
+                                value="<%=people.lastname%>"></td>
+                    </tr>
+                    <tr>
+                        <th class="teal">Résidence</th>
+                        <td><input class="center-align black-text" disabled type="text" name="town"
+                                value="<%=people.town%>"></td>
+                    </tr>
+                    <tr class="grey lighten-2">
+                        <th class="teal darken-2">Age</th>
+                        <td><input class="center-align black-text" disabled type="number" name="age"
+                                value="<%=people.age%>"></td>
+                    </tr>
+                    <tr>
+                        <th class="teal" rowspan="2">Sexe :</th>
+                        <td><%=people.gender%></td>
+                    </tr>
+                    <tr>
+                        <td><label>
+                                <input class="browser-default" type="radio" name="gender" value="Femme" />
+                                <span>Femme</span>
+                            </label>
+                            <label>
+                                <input class="browser-default" type="radio" name="gender" value="Homme" />
+                                <span>Homme</span>
+                            </label></td>
+                    </tr>
+                    <tr class="grey lighten-2">
+                        <th class="teal darken-2">A propos</th>
+                        <td><input class="center-align black-text" disabled type="text" name="info"
+                                value="<%=people.info%>"></td>
+                    </tr>
+                    <tr>
+                        <th class="teal">Formation</th>
+                        <td><input class="center-align black-text" disabled type="text" name="formation"
+                                value="<%=people.formation%>"></td>
+                    </tr>
+                    <tr class="grey lighten-2">
+                        <th class="teal darken-2">Compétences</th>
+                        <td><input class="center-align black-text" disabled type="text" name="skills"
+                                value="<%=people.skills%>"></td>
+                    </tr>
+                    <tr>
+                        <th class="teal">Email</th>
+                        <td><input class="center-align black-text" disabled type="text" name="email"
+                                value="<%=people.email%>"></td>
+                    </tr>
+                    <tr class="grey lighten-2">
+                        <th class="teal darken-2">Téléphone</th>
+                        <td><input class="center-align black-text" maxlength="10" disabled type="text" name="phone"
+                                value="<%=people.phone%>"></td>
+                    </tr>
+                    <tr>
+                        <th class="teal">Rôle</th>
+                        <td><input class="center-align black-text" disabled type="text" name="role"
+                                value="<%=people.role%>"></td>
+                    </tr>
+                </table>
+                <div class="divBtn">
+                    <button class="btn valid" type="submit" disabled>Valider</button>
+                </div>
+            </form>
+        </article>
+        <%}%>
+        <div class="divBtn">
+            <input class="btn modify" type="button" value="Modifier"> 
+            <input class="btn delete" type="button" value="Supprimer">
+            <input class="btn create" type="button" value="Créer">
+        </div>
+        <div id="formHidden" style="display: none;">
+            <form id="suppressForm">
+                <label for="users-delete">Choisissez le numéro de l'utilisateur à supprimer</label>
+                <select class="browser-default selectDel" name="people" id="users-delete">
+                    <% for(let people of peoples){%>
+        <option name="valueId" id="optionDelete" value="<%=people.id%>"><%=people.id%></option>
+        <%}%>
+                </select>
+                <input class="btn" type="submit" name="subDelete" value="Confirmer" id="confirmSupr">
+            </form>
+        </div>
+        <div id="formCreateHidden" style="display: none;">
+            <form id="createForm" action="/people" method="POST">
+                <div class="valign-wrapper row">
+                    <div class="input-field col s6">
+                        <input id="firstname" name="firstname" type="text" class="validate">
+                        <label for="firstname">Prénom</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="lastname" name="lastname" type="text" class="validate">
+                        <label for="lastname">Nom</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                            <input id="age" type="number" name="age" min="14" max="70" class="validate">
+                            <label for="age">Age</label>
+                    </div>
+                    <p class="col s6"> 
+                        Sexe :<br>
+                        <div class="row">
+                            <label>
+                                <input type="radio" name="gender" value="Femme"/>
+                                <span>Femme</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="Homme"/>
+                                <span>Homme</span>
+                            </label>
+                        </div>
+                    </p>
+                </div>
+                    <div class="row">
+                    <div class="input-field col s6">
+                            <input id="phone" name="phone" type="tel" maxlength="10" class="validate">
+                            <label for="phone">Téléphone</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="town" type="text" name="town" class="validate" placeholder="Ville de résidence">
+                        <label for="town">Résidence</label>
+                    </div>
+                    </div>
+                <div class="row">
+                    <div class="input-field col s9">
+                            <input id="email" name="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="info" name="info" class="materialize-textarea" placeholder="Présentez-vous en quelques lignes à votre futur employeur"></textarea>
+                        <label for="info">A propos</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="formation" name="formation" class="materialize-textarea" placeholder="Exposez votre cursus"></textarea>
+                        <label for="formation">Formation</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="skills" name="skills" class="materialize-textarea" placeholder="Quelles compétences mettez-vous en avant ?"></textarea>
+                        <label for="skills">Compétences</label>
+                    </div>
+                </div>
+                    <button id="createCompaBtn" type="submit" class="btn">Valider</button>
+                </form>
+        </div>
+        <h5 class='center'><a id="backAdmin" href="/admin">Retour à la page d'administration</a></h5>
+        </section>
+        <script src="/js/adminCRUD.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

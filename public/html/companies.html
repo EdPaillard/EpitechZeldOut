@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<title>ZeldOut</title>
+	</head>
+
+	<body class="grey lighten-4">
+		<header class="teal">
+			<nav class="teal">
+				<div id="navMain" class="nav-wrapper">
+					<a href="index.html"><img id="logoMain" class="left" src="../images/logo_zeldout.png" alt="Logo ZeldOut"></a>
+				      <!-- <input id="searchInput" type="text" class="browser-default searchTerm" placeholder="What are you looking for?">
+				      <button id="searchBtn" type="submit" class="browser-default searchButton">
+				        <img id="loupe" src="../images/search_ico.png" alt="search icon" />
+				     </button> -->
+					<ul class="right">
+						<li class="active"><a href="index.html">Accueil</a></li>
+						<li class="active"><a href="mail.html">Messagerie</a></li>
+						<li class="active"><a href="contact.html">Contact</a></li>
+						<li id="liProfil"><img id="photoProfil" class="right circle" src="../images/edouard.png" alt="Photo de profil User">
+					      <ul id="subMenu" class="right hide-on-med-and-down">
+					        <a id="redirectProfil" class="valign-wrapper" href="profil.html"><li class="valign-wrapper">Profil</li></a>
+					        <a id="inscriptionListItem" class="valign-wrapper" href="inscription.html"><li class="valign-wrapper">S'inscrire</li></a>
+					        <a id="connectSM" href="connect.html" class="valign-wrapper"><li class="valign-wrapper">Se déconnecter</li></a>
+					      </ul>
+						</li>
+					</ul>	
+				</div>
+			</nav>
+		</header>
+
+		<main id="companiesMain">
+            <section id="companiesSection">
+				<div id="test"></div>
+				
+					<div id="displayCompanies">
+					</div>
+					<div id="displayFetchAds"></div>
+				
+				<!-- <template id="companiesTemplate"> -->
+					<div id="companiesAdsWrapper">
+						<article class="companiesCard card">
+							<h2 class="card-title teal white-text">Spirou Magazine</h2>
+							<span class="miniTitle">Mulhouse</span><h4 class="card-title teal white-text">A propos</h4> <p id="aboutCompany">Lorem ipsum</p>
+							<p><h4 class="card-title teal white-text">Contact</h4><strong>Email: </strong><a id="mailCompany" href="#">mail@mail.mail</a><br>
+								<strong>Téléphone:</strong> <i id="phoneCompany">10chiffres</i></p>
+							<div class="displayAds"><a id="aDispAds" class="arrowDisplayAds">&#10095;</a></div>
+						</article>
+						<div id="grilleAds">
+							<article class="companiesCard2 card">
+								<h2 id="adTitle" class="card-title teal white-text">Gestionnaire de gaffes</h2>
+								<span class="miniTitle">Ville - CreatedAt</span><h4 class="card-title teal white-text">Description</h4>
+								<p id="adDescribe" >Lorem ipsum<br><h4 class="card-title teal white-text"><strong>Salaire</strong></h4><strong id="salaryAd">Enormément €</strong>.</p>
+							</article>
+							<article class="companiesCard2 card">
+								<h2 id="adTitle" class="card-title teal white-text">Gestionnaire de gaffes</h2>
+								<span class="miniTitle">Ville - CreatedAt</span><h4 class="card-title teal white-text">Description</h4>
+								<p id="adDescribe" >Lorem ipsum<br><h4 class="card-title teal white-text"><strong>Salaire</strong></h4><strong id="salaryAd">Enormément €</strong>.</p>
+							</article>
+							<article class="companiesCard2 card">
+								<h2 id="adTitle" class="card-title teal white-text">Gestionnaire de gaffes</h2>
+								<span class="miniTitle">Ville - CreatedAt</span><h4 class="card-title teal white-text">Description</h4>
+								<p id="adDescribe" >Lorem ipsum<br><h4 class="card-title teal white-text"><strong>Salaire</strong></h4><strong id="salaryAd">Enormément €</strong>.</p>
+							</article>
+						</div>
+					</div>
+				<!-- </template> -->
+            </section>
+		</main>
+
+		<footer>
+			<address class="center-align"><a href="mailto:ed.paillard@gmail.com">Contact</a> - Tous droits réservés - Avec l'aimable participation financière du CNC</address>
+		</footer>
+		<!-- <script type="text/javascript" src="../js/companiesFetchTest.js"></script> -->
+		<script type="text/javascript" src="../js/connexion.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script type="text/javascript" src="../js/profil.js"></script>
+		<script src="../js/companiesAdsDEPRECATED.js"></script>
+		<!-- <script type="text/javascript" src="../js/companiesAds.js"></script> -->
+	</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<title>ZeldOut</title>
+	</head>
+
+	<body class="grey lighten-4">
+		<header class="teal">
+			<nav class="teal">
+				<div id="navMain" class="nav-wrapper">
+					<a href="index.html"><img id="logoMain" class="left" src="../images/logo_zeldout.png" alt="Logo ZeldOut"></a>
+				      <input id="searchInput" type="text" class="browser-default searchTerm" placeholder="What are you looking for?">
+				      <button id="searchBtn" type="submit" class="browser-default searchButton">
+				        <img id="loupe" src="../images/search_ico.png" alt="search icon" />
+				     </button>
+					<ul class="right">
+						<li class="active"><a href="index.html">Accueil</a></li>
+						<li class="active"><a href="mail.html">Messagerie</a></li>
+						<li class="active"><a href="contact.html">Contact</a></li>
+						<li id="liProfil"><img id="photoProfil" class="right circle" src="../images/edouard.png" alt="Photo de profil User">
+					      <ul id="subMenu" class="right hide-on-med-and-down">
+					        <a id="redirectProfil" class="valign-wrapper" href="profil.html"><li class="valign-wrapper">Profil</li></a>
+					        <a id="inscriptionListItem" class="valign-wrapper" href="inscription.html"><li class="valign-wrapper">S'inscrire</li></a>
+					        <a id="connectSM" href="connect.html" class="valign-wrapper"><li class="valign-wrapper">Se déconnecter</li></a>
+					      </ul>
+						</li>
+					</ul>	
+				</div>
+			</nav>
+		</header>
+
+		<main id="mailMain">
+			<section class="mailSection">
+				<article id="favoritesAd">
+					<h5 class="teal white-text">Favorites ads</h5>
+					<ul class="collection">
+				      <li class="collection-item collecFavAds">Epipitech</li>
+				      <li class="collection-item collecFavAds">Dixchatons</li>
+				      <li class="collection-item collecFavAds">Hardenceinte</li>
+				      <li class="collection-item collecFavAds">Hommedoré</li>
+				    </ul>
+				</article>
+				<article id="mailFavAd">
+					<div class="card-panel">
+						<h5 class="card-title teal white-text">Mon entreprise favorite</h5>
+						<form action="mailto:ed.paillard@gmail.com">
+							<textarea style="resize: none; height: 100px;" placeholder="Contactez l'entreprise" rows="200"></textarea>
+							<button class="btn waves-effect waves-light right-align" type="submit" name="action">Submit</button>
+						</form>
+					</div>
+				</article>
+			</section>
+
+			<div class="teal" style="height: 40px; width: 100%; margin-right: auto; margin-left: auto;"></div>
+
+			<section class="mailSection">
+				<article id="statusMail">
+					<h5 class="teal white-text">Your emails</h5>
+					<ul class="collection">
+				      <li class="collection-item collecMailSent">Sauron's Corp</li>
+				      <li class="collection-item collecMailSent">Dixchatons</li>
+				      <li class="collection-item collecMailSent">Hardenceinte</li>
+				      <li class="collection-item collecMailSent">Hommedoré</li>
+				    </ul>
+				</article>
+				<article id="exchangeMails">
+					<div class="card">
+						<h5 class="card-title teal white-text">Sauron's Corp</h5>
+						<form id="formMails" action="mailto:ed.paillard@gmail.com">
+							<p id="emailsDisplay"></p>
+							<button class="btn waves-effect waves-light" type="submit" name="action">Répondre</button>
+						</form>
+					</div>
+				</article>
+			</section>
+		</main>
+
+		<footer>
+			<address class="center-align"><a href="mailto:ed.paillard@gmail.com">Contact</a> - Tous droits réservés - Avec l'aimable participation financière du CNC</address>
+		</footer>
+		<script type="text/javascript" src="../js/connexion.js"></script>
+		<script type="text/javascript" src="../js/profil.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	</body>
+</html>

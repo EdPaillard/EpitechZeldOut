@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<title>ZeldOut</title>
+	</head>
+
+	<body class="grey lighten-4">
+		<header class="teal">
+			<nav class="teal">
+				<div id="navMain" class="nav-wrapper">
+					<a href="index.html"><img id="logoMain" class="left" src="../images/logo_zeldout.png" alt="Logo ZeldOut"></a>
+				      <input id="searchInput" type="text" class="browser-default searchTerm" placeholder="What are you looking for?">
+				      <button id="searchBtn" type="submit" class="browser-default searchButton">
+				        <img id="loupe" src="../images/search_ico.png" alt="search icon" />
+				     </button>
+					<ul class="right">
+						<li class="active"><a href="index.html">Accueil</a></li>
+						<li class="active"><a href="mail.html">Messagerie</a></li>
+						<li class="active"><a href="contacts.html">Contact</a></li>
+						<li id="liProfil"><img id="photoProfil" class="right circle" src="../images/edouard.png" alt="Photo de profil User">
+					      <ul id="subMenu" class="right hide-on-med-and-down">
+					        <a id="redirectProfil" class="valign-wrapper" href="profil.html"><li class="valign-wrapper">Profil</li></a>
+					        <a id="inscriptionListItem" class="valign-wrapper" href="inscription.html"><li class="valign-wrapper">S'inscrire</li></a>
+					        <a id="connectSM" href="connect.html" class="valign-wrapper"><li class="valign-wrapper">Se déconnecter</li></a>
+					      </ul>
+						</li>
+					</ul>	
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<section id="profilSection">
+				<article id="profilArticle">
+					<div id="divmodifyBtn">
+						<a id="modifyBtn" href="modifprofil.html">Modifier</a>
+					</div>
+					<template id="profilTemplate">
+					<div class="card col s9 ssProfil">
+						<div id="headProfil">
+							<div class="col s2">
+								<img id="imgProfil" class="responsive-img circle" src="../images/edouardpp.png">
+							</div>
+							<div class="col s2">
+								<h2 class="card-title">Edouard PAILLARD</h2>
+							</div>
+						</div>
+						<div><p id="ageSexeVille">Age - Sexe - town</p></div>
+					</div>
+					<div class="card ssProfil">
+						<h5 class="teal white-text">A propos de moi</h5>
+						<p id="aboutMe">Lorem ipsum</p>
+					</div>
+					<div class="card ssProfil">
+						<h5 class="teal white-text">Ma formation</h5>
+						<p id="formation">Lorem ipsum</p>
+					</div>
+					<div class="card ssProfil">
+						<h5 class="teal white-text">Mes compétences</h5>
+						<p id="skills">Lorem ipsum</p>
+					</div>
+					<div class="card ssProfil">
+						<h5 class="teal white-text">Mes contacts</h5>
+						<p id="contact">email phone</p>
+					</div>
+					</template>
+				</article>
+			</section>
+		</main>
+
+		<footer>
+			<address class="center-align"><a href="mailto:ed.paillard@gmail.com">Contact</a> - Tous droits réservés - Avec l'aimable participation financière du CNC</address>
+		</footer>
+		<script type="text/javascript" src="../js/connexion.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script type="text/javascript" src="../js/profil.js"></script>
+		<script type="text/javascript" src="../js/profilFetch.js"></script>
+	</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="shortcut icon" href="/images/logo_zeldout.ico">
+    <title>ZeldOut</title>
+</head>
+
+<body class="grey lighten-4">
+    <header class="teal">
+        <nav class="teal">
+            <div id="navMain" class="nav-wrapper">
+                <a href="/"><img id="logoZO" class="left" src="/images/logo_zeldout.png" alt="Logo ZeldOut"></a>
+                <ul class="right">
+                    <li class="active"><a href="/">Accueil</a></li>
+                    <li class="active"><a href="/inscription">S'inscrire</a></li>
+                    <li class="active"><a href="/login">Se connecter</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section id="companiesSection">
+        <div id="companiesAdsWrapper">
+            <% for (let company of companies) { %>
+
+            <article class="companiesCard card">
+                <h2 class="card-title teal white-text"><%=company.name%></h2> <span
+                    class="miniTitle"><%=company.city%></span>
+                <h4 class="card-title teal white-text">A propos</h4>
+                <p id="aboutCompany"><%= company.about %> </p>
+                <p>
+                    <h4 class="card-title teal white-text">Contact</h4><strong>Email: </strong><a id="mailCompany"
+                        href="#"><%= company.email %></a><br>
+                    <strong>Téléphone:</strong> <i id="phoneCompany"><%= company.phone %></i>
+                </p>
+                <div class="displayAds center-align"><a href="/companies/<%=company.idc%>/ads" id="aDispAds">Voir les
+                        offres de <%=company.name%> </a></div>
+            </article>
+
+
+
+            <div id="grilleAds">
+                <article class="companiesCard2 card">
+                    <h2 id="adTitle" class="card-title teal white-text"><%=company.title %></h2>
+                    <span class="miniTitle"><%= company.city %> - <%= company.createdAt %></span>
+                    <h4 class="card-title teal white-text">Description</h4>
+                    <p id="adDescribe"><%= company.description %><br>
+                        <h4 class="card-title teal white-text"><strong>Salaire</strong></h4><strong
+                            id="salaryAd"><%= company.salary %> €</strong>.
+                    </p>
+            </div>
+            <% }%>
+        </div>
+    </section>
+    <footer>
+        <address class="center-align"><a href="mailto:zeldoutworkplatform@gmail.com">Contact</a> - Tous droits réservés
+            - Avec
+            l'aimable participation financière du CNC</address>
+    </footer>
+    <script type="text/javascript" src="/js/connexion.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/js/profil.js"></script>
+    <script src="/js/companiesAds.js"></script>
+</body>
+
+</html>

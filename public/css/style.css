@@ -1,0 +1,956 @@
+/* ------- Admin section ------- */
+
+#adminSection {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#adminSection h2 {
+  width: 100%;
+  text-align: justify;
+  text-decoration: underline;
+  font-size: 40px;
+  margin: 2rem auto 2rem auto;
+  padding: 2rem;
+}
+
+#adminSection h5 {
+  margin-bottom: 5%;
+}
+
+#adminSection table {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+  box-shadow: 5px 5px 5px black;
+  padding: 5px;
+}
+
+#adminSection th {
+  width: 20%;
+}
+
+#adminSection td {
+  width: 40%;
+}
+
+#backAdmin {
+  text-decoration: underline;
+  color: black;
+}
+
+.articleAdmin {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  /* display: flex;
+	justify-content: center; */
+}
+
+.divBtn {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+}
+
+.selectDel {
+  width: 30%;
+}
+
+.pagination li.active
+{
+  background-color: #009688;
+}
+
+/* ------- Admin Btns ------- */
+/* .valid
+	{
+
+	}
+
+	.modify
+	{
+
+	}
+
+	.delete
+	{
+
+	} */
+
+/* ------- Main Page ------- */
+
+/* ------- Général ------- */
+
+.card {
+  border-radius: 10px;
+}
+
+.card-panel {
+  border-radius: 10px;
+}
+
+.collection {
+  border-radius: 0 0 10px 10px;
+}
+
+#indexBody {
+  overflow: scroll;
+}
+
+/* .laDiv
+{
+	display: none;
+} */
+
+/* ------- Navbar ------- */
+
+header {
+  display: flex;
+  margin-bottom: 3%;
+}
+
+#navMain {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#searchInput {
+  height: 48px;
+  position: relative;
+  top: -12px;
+  border-radius: 10px 0 0 10px;
+  border: solid 7px #00897b;
+  margin-left: 20px;
+}
+
+#searchBtn {
+  background-color: #00897b;
+  border: none;
+  position: relative;
+  top: 6px;
+  left: -7px;
+  height: 48px;
+  width: fit-content;
+  padding: 0;
+}
+
+#loupe {
+  cursor: pointer;
+}
+
+/* ------- Main MainPage ------- */
+
+#mainMain {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  height: 100%;
+}
+
+#shortInfos {
+  width: 27%;
+}
+
+#adDisplay {
+  width: 67%;
+}
+
+h2 {
+  margin-top: 8px;
+  font-weight: 500 !important;
+  padding: 3px;
+}
+
+#advertId {
+  opacity: 0;
+}
+
+.advertizing h2 {
+  margin-bottom: 0px !important;
+}
+
+span {
+  display: inline-block;
+  font-size: 15px;
+  margin-bottom: 8px;
+  margin-top: 2px;
+}
+
+.card-action {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sidebarBtn {
+  margin: 10px;
+}
+
+.sidebarArtcl {
+  display: flex;
+  flex-direction: column;
+}
+
+.adBtn {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#toAppend {
+  margin-top: 15px;
+}
+
+#vireLien {
+  text-decoration: none !important;
+  margin-right: 0 !important;
+  color: white !important;
+  display: inline-block;
+  height: 100%;
+  width: max-content;
+}
+
+#infoPP {
+  position: absolute;
+  right: 10px;
+  box-shadow: 2px 2px 5px black;
+}
+
+#canevasInfoPP {
+  position: relative;
+}
+
+/* ------- Connexion status ------- */
+
+#connectAlert {
+  height: 80px;
+  width: 100%;
+  background-color: rgba(255, 250, 159, 0.4);
+  margin-top: -3%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#connactAlert p {
+  margin: 0;
+}
+
+#closeAlert {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+/* ------- Profil subMenu ------- */
+
+#liProfil {
+  height: 64px;
+  padding: 9.5px 15px 0 15px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+#photoProfil {
+  height: 70%;
+  width: auto;
+  cursor: pointer;
+}
+
+#subMenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 64px;
+  right: 0;
+  width: 250%;
+  z-index: 10;
+  background-color: #00897b;
+}
+
+#subMenu li {
+  height: 60px;
+  margin: 10px;
+  text-align: justify;
+  z-index: 2;
+}
+
+#subMenu li:hover {
+  background-color: #00796b;
+}
+
+#subMenu a {
+  height: 60px;
+  padding: 0;
+  z-index: 20;
+}
+
+/* ------- Footer ------- */
+
+footer {
+  margin: 25px;
+}
+
+/* ------- Apply Section ------- */
+
+#applyBox {
+  position: absolute;
+  top: 25vh;
+  right: 30%;
+  left: 30%;
+  bottom: 25vh;
+  z-index: 20;
+  background-color: rgba(250, 250, 250, 1);
+  display: none;
+}
+
+#applyBox2 {
+  position: absolute;
+  top: 25vh;
+  right: 30%;
+  left: 30%;
+  bottom: 25vh;
+  z-index: 20;
+  background-color: rgba(250, 250, 250, 1);
+  display: none;
+  overflow-y: scroll;
+}
+
+#relativApplyBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+}
+
+#relativApplyBox form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 30%;
+}
+
+#relativApplyBox2 {
+  position: relative;
+  padding: 20px;
+}
+
+#relativApplyBox2 form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#fileApplyBtn {
+  margin-bottom: 20px;
+}
+
+#changingApply {
+  height: 100px;
+  width: 100px;
+}
+
+#closeBtn {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#closeBtn2 {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* ------- Inscription Page ------- */
+
+#switchCompanies {
+  display: flex;
+  justify-content: center;
+}
+
+#companiesForm {
+  display: none;
+}
+
+#inscriptionMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+#inscriptionSection {
+  height: fit-content;
+}
+
+#submBtn {
+  display: flex;
+  justify-content: center;
+}
+
+#description {
+  height: 100px;
+  width: 400px;
+}
+
+/* ------- Connect Page ------- */
+
+#connectMain {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#connectSection {
+  margin-top: 4%;
+  width: fit-content;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#connectSection h4 {
+  margin-top: 5px;
+}
+
+/* ------- Mail Page ------- */
+
+#mailMain {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mailSection {
+  display: flex;
+}
+
+.mailSection h5 {
+  margin: 7px 0 0 0;
+  padding: 10px;
+  font-weight: 500;
+}
+
+.mailSection ul {
+  margin-top: 0;
+}
+
+#favoritesAd {
+  width: 30%;
+}
+
+#statusMail {
+  width: 30%;
+}
+
+#mailFavAd {
+  width: 66%;
+  margin-left: 4%;
+}
+
+#exchangeMails {
+  width: 66%;
+  margin-left: 4%;
+}
+
+#emailsDisplay {
+  height: fit-content;
+}
+
+#formMails {
+  padding: 5px;
+}
+
+/* ------- Profil Page ------- */
+
+#headProfil {
+  display: flex;
+  align-items: center;
+}
+
+#imgProfil {
+  height: 100px;
+  width: 100px;
+  margin-right: 20px;
+}
+
+#profilSection {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#divmodifyBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#modifyBtn {
+  padding: 5px;
+  border: solid 2px white;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  width: fit-content;
+}
+
+.ssProfil {
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.ssProfil h5,
+h3 {
+  margin-top: 0;
+  width: 40%;
+  padding: 5px;
+}
+
+/* ------- Company Profil ------- */
+
+#companyProfilMain {
+  display: flex;
+  align-items: center;
+}
+
+#manageManager {
+  position: absolute;
+  top: 40%;
+  width: 15%;
+  cursor: pointer;
+}
+
+.manageItem:hover {
+  background-color: rgba(217, 217, 217, 1);
+  color: white;
+}
+
+#profilCompany {
+  display: none;
+}
+
+#profilAd {
+  display: none;
+}
+
+#addAdBtn {
+  font-size: 40px;
+  height: 60px;
+  width: 60px;
+}
+
+/* ------- Modify Profil Page ------- */
+
+#headModifyProfil {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#imgModifyProfil {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+#darkOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  display: none;
+}
+
+#ppBox {
+  position: absolute;
+  top: 25vh;
+  right: 30vh;
+  left: 30vh;
+  bottom: 25vh;
+  z-index: 20;
+  background-color: rgba(250, 250, 250, 1);
+  display: none;
+}
+
+#relativppBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+}
+
+#relativppBox form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#filePPBtn {
+  margin-bottom: 20px;
+}
+
+#changingPP {
+  height: 100px;
+  width: 100px;
+}
+
+#closeBtn {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#divPhotoProfil {
+  position: relative;
+  height: 100px;
+  width: 100px;
+}
+
+#changePP {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#imgModifyProfil:hover ~ #changePP {
+  display: inline-block;
+}
+
+#changePP:hover {
+  display: inline-block;
+}
+
+/* ------- Companies Page ------- */
+
+#companiesMain {
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  height: 100%;
+}
+
+#companiesSection {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#grilleAds {
+  display: none;
+  grid-template-columns: repeat(3, 33.3%);
+}
+
+.companiesCard {
+  text-align: justify;
+  padding: 2%;
+  width: 100%;
+  position: relative;
+  padding-bottom: 5%;
+}
+
+.companiesCard2 {
+  text-align: justify;
+  padding: 2%;
+  width: 100%;
+  position: relative;
+}
+
+.displayAds {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 10%;
+  width: 100%;
+}
+
+.displayAds:hover {
+  background-color: rgba(217, 217, 217, 1);
+}
+
+.displayAds:hover > a {
+  color: rgba(250, 250, 250, 1);
+}
+
+.arrowDisplayAds {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 50px;
+  cursor: pointer;
+  color: rgba(217, 217, 217, 1);
+  transform: rotate(90deg);
+}
+
+.companiesCard h2 {
+  margin-bottom: 1px;
+}
+
+.companiesCard h2,
+h4 {
+  padding: 5px;
+  width: 90%;
+}
+
+.miniTitle {
+  font-size: 12px;
+  color: gray;
+}
+
+/* ------- Company page ------- */
+
+#companyArticle {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 a {
+  color: black;
+}
+
+h2 a:hover {
+  color: teal;
+}
+
+/* ------- Creation Ads ------- */
+
+#createAdMain {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ------- Media Queries ------- */
+
+@media all and (max-width: 350px) {
+  #logoZO {
+    display: none;
+  }
+
+  #logoZOWP {
+    height: 50px;
+    width: 50px;
+  }
+
+  #hideout {
+    display: none;
+  }
+
+  #navMain {
+    width: 100%;
+  }
+
+  #mainMain {
+    flex-direction: column;
+  }
+
+  #shortInfos {
+    width: 100%;
+  }
+
+  #adDisplay {
+    width: 100%;
+  }
+
+  .sidebarArtcl2 {
+    display: none;
+  }
+
+  .brand-logo {
+    height: 56px;
+  }
+
+  .card-action {
+    flex-direction: column;
+  }
+
+  .card-action {
+    padding: 16px 0 !important;
+  }
+
+  .card-title {
+    font-size: 18px !important;
+  }
+
+  h5 {
+    font-size: 12px !important;
+  }
+
+  .btn {
+    font-size: 10px;
+  }
+
+  #navMain ul li a {
+    font-size: 0.5rem;
+  }
+
+  .companiesCard {
+    padding-bottom: 15%;
+  }
+
+  #grilleAds {
+    display: none;
+    grid-template-columns: repeat(1, 100%);
+  }
+
+  .infoCompany {
+    overflow-wrap: break-word;
+  }
+
+  #adminSection h2 {
+    font-size: 10px;
+  }
+
+  #adminSection table {
+    width: 100%;
+  }
+
+  .divBtn {
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 600px) and (min-width: 351px) {
+  #logoZO {
+    height: 50px;
+    width: 50px;
+  }
+
+  #logoZOWP {
+    height: 50px;
+    width: 50px;
+  }
+
+  #navMain {
+    width: 100%;
+  }
+
+  .brand-logo {
+    height: 56px;
+  }
+
+  #hideout {
+    display: none;
+  }
+
+  #mainMain {
+    flex-direction: column;
+  }
+
+  #shortInfos {
+    width: 100%;
+  }
+
+  #adDisplay {
+    width: 100%;
+  }
+
+  .sidebarArtcl2 {
+    display: none;
+  }
+
+  .card-action {
+    padding: 16px 0 !important;
+  }
+
+  .card-title {
+    font-size: 18px !important;
+  }
+
+  h5 {
+    font-size: 16px !important;
+  }
+
+  .btn {
+    font-size: 10px;
+  }
+
+  #navMain ul li a {
+    font-size: 0.7rem;
+  }
+
+  .companiesCard {
+    padding-bottom: 10%;
+  }
+
+  #grilleAds {
+    display: none;
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  #adminSection h2 {
+    font-size: 18px;
+  }
+
+  #adminSection table {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 1000px) and (min-width: 601px) {
+  #hideout {
+    font-size: 10px;
+  }
+
+  #mainMain {
+    flex-direction: column;
+  }
+
+  #shortInfos {
+    width: 100%;
+  }
+
+  #adDisplay {
+    width: 100%;
+  }
+
+  .sidebarArtcl2 {
+    display: none;
+  }
+
+  #adminSection h2 {
+    font-size: 25px;
+  }
+
+  #adminSection table {
+    width: 100%;
+  }
+}

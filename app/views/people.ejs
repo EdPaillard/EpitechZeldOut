@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="shortcut icon" href="/images/logo_zeldout.ico">
+    <title>ZeldOut</title>
+</head>
+
+<body class="grey lighten-4">
+    <header class="teal">
+        <nav class="teal">
+            <div id="navMain" class="nav-wrapper">
+                <a href="/"><img id="logoMain" class="left" src="/images/logo_zeldout.png" alt="Logo ZeldOut"></a>
+                <ul class="right">
+                    <li class="active"><a href="/">Accueil</a></li>
+                    <li class="active"><a href="/profil">Profil</a></li>
+                    <li class="active"><a href="/logout">Se déconnecter</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <main>
+            <section id="profilSection">
+                <article>
+                    <div id="divmodifyBtn">
+                        <a id="modifyBtn" href="/modify/<%=people.id%>">Modifier</a>
+                    </div>
+                    <div class="card col s9 ssProfil">
+                        <div class="col s2">
+                            <h2 class="card-title"><%= people.firstname %><br><%= people.lastname %></h2>
+                        </div>
+                    </div>
+                    <div class="card ssProfil">
+                        <h5 class="teal white-text">A propos de moi</h5>
+                        <p><%= people.info %></p>
+                    </div>
+                    <div class="card ssProfil">
+                        <h5 class="teal white-text">Ma formation</h5>
+                        <p><%= people.formation %></p>
+                    </div>
+                    <div class="card ssProfil">
+                        <h5 class="teal white-text">Mes compétences</h5>
+                        <p><%= people.skills %></p>
+                    </div>
+            </section>
+        </main>
+
+        <footer>
+            <address class="center-align"><a href="mailto:zeldoutworkplatform@gmail.com">Contact</a> - Tous droits
+                réservés - Avec l'aimable participation financière du CNC</address>
+        </footer>

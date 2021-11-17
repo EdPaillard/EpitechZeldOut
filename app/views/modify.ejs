@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="shortcut icon" href="/images/logo_zeldout.ico">
+	<title>ZeldOut</title>
+</head>
+
+<body class="grey lighten-4">
+	<header class="teal">
+		<nav class="teal">
+			<div id="navMain" class="nav-wrapper">
+				<a href="/"><img id="logoMain" class="left" src="/images/logo_zeldout.png" alt="Logo ZeldOut"></a>
+				<ul class="right">
+					<li class="active"><a href="/">Accueil</a></li>
+					<li class="active"><a href="/profil">Profil</a></li>
+					<li class="active"><a href="/logout">Se déconnecter</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<section id="profilSection">
+			<article>
+				<div class="card col s9 ssProfil">
+					<div id="headModifyProfil">
+						<div class="row">
+							<form id="inscriptionForm" class="col s12" action="/profil/<%= people.id %>" method="POST">
+								<div class="valign-wrapper row">
+									<div class="input-field col s6">
+										<input id="first_name" name="firstname" type="text" class="validate"
+											value="<%= people.firstname %>">
+										<label for="first_name">Prénom</label>
+									</div>
+									<div class="input-field col s6">
+										<input id="last_name" name="lastname" type="text" class="validate"
+											value="<%= people.lastname %>">
+										<label for="last_name">Nom</label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="input-field col s6">
+										<input id="age" type="number" required name="age" min="14" max="70"
+											class="validate" value="<%=people.age%>">
+										<label for="age">Age</label>
+									</div>
+									<p class="col s6">
+										Sexe :<br>
+										<div class="row"><label>
+												<input type="radio" name="gender" value="femme" />
+												<span>Femme</span>
+											</label>
+											<label>
+												<input type="radio" name="gender" value="homme" />
+												<span>Homme</span>
+											</label></div>
+									</p>
+								</div>
+								<div class="row">
+									<div class="input-field col s6">
+										<input id="phone" name="phone" type="tel" maxlength="10" required
+											class="validate" value="<%=people.phone%>">
+										<label for="phone">Téléphone</label>
+									</div>
+									<div class="input-field col s6">
+										<input id="residence" type="text" name="town" class="validate"
+											placeholder="Ville de résidence" value="<%= people.residence %>">
+										<label for="residence">Résidence</label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="input-field col s9">
+										<input id="email" name="email" type="email" class="validate"
+											value="<%= people.email %>">
+										<label for="email">Email</label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="input-field col s12">
+										<textarea value="<%= people.info %>" id="aboutMe" name="info"
+											class="materialize-textarea"
+											placeholder="Présentez-vous en quelques lignes à votre futur employeur"></textarea>
+										<label for="aboutMe">A propos</label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="input-field col s12">
+										<textarea value="<%= people.formation %>" id="formation" name="formation"
+											class="materialize-textarea" placeholder="Exposez votre cursus"></textarea>
+										<label for="formation">Formation</label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="input-field col s12">
+										<textarea value="<%= people.skills %>" id="competences" name="skills"
+											class="materialize-textarea"
+											placeholder="Quelles compétences mettez-vous en avant ?"></textarea>
+										<label for="competence">Compétences</label>
+									</div>
+								</div>
+								<button id="submProfBtn" type="submit" class="btn">Enregistrer</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</article>
+		</section>
+	</main>
+
+	<footer>
+		<address class="center-align"><a href="mailto:zeldoutworkplatform@gmail.com">Contact</a> - Tous droits réservés
+			- Avec l'aimable participation financière du CNC</address>
+	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="../js/createProfilPost.js"></script>
+	<!-- <script src="../js/modifyProfil.js"></script> -->
+</body>
+
+</html>

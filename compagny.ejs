@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+
+<article id="companyArticle"> 
+    <div class="card col s9 ssProfil">
+        <h3 class="card-title teal white-text"><%= company.name %></h3>
+        <h2 class="card-title center-align"><a href ="/companies/<%=company.idc%>/ads">Voir les offres de <%= company.name %> </a>  </h2>
+    </div>
+    <div class="card ssProfil">
+        <h5 class="teal white-text">Quelques mots...</h5>
+        <p><%= company.about %> </p>
+    </div>
+    <div class="card ssProfil">
+        <h5 class="infoCompany teal white-text">Contact</h5>
+        <ul>
+            <li>Siège social:<%= company.location %> </li>
+            <li>Email: <%= company.email %> </li>
+            <li>Téléphone:<%= company.phone %> </li>
+        </ul>
+    </div>
+</article>
+<footer>
+    <address class="center-align"><a href="mailto:ed.paillard@gmail.com">Contact</a> - Tous droits réservés - Avec l'aimable participation financière du CNC</address>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="../js/profil.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<%-include('partials/header')%>
+<div id="companiesAdsWrapper">
+    <% for (let company of companies) { %>
+    <article class="companiesCard card">
+        <h2 class="card-title teal white-text"><%=company.name%><</h2> <span class="miniTitle"><%=company.city%></span>
+                <h4 class="card-title teal white-text">A propos</h4>
+                <p id="aboutCompany"><%= company.about %>/p>
+                    <p>
+                        <h4 class="card-title teal white-text">Contact</h4><strong>Email: </strong><a id="mailCompany"
+                            href="#"><%= company.email %></a><br>
+                        <strong>Téléphone:</strong> <i id="phoneCompany"><%= company.phone %></i>
+                    </p>
+                    <div class="displayAds"><a id="aDispAds" class="arrowDisplayAds">&#10095;</a></div>
+    </article>
+
+    <div id="grilleAds">
+        <% if (ad.id == company.id) {
+            for (let ad of ads) { %>
+        <article class="companiesCard2 card">
+            <h2 id="adTitle" class="card-title teal white-text"><%= ad.title %></h2>
+            <span class="miniTitle"><%= ad.city %> - <%= ad.createdAt %></span>
+            <h4 class="card-title teal white-text">Description</h4>
+            <p id="adDescribe"><%= ad.description %><br>
+                <h4 class="card-title teal white-text"><strong>Salaire</strong></h4><strong
+                    id="salaryAd"><%= ad.salary %> €</strong>.
+            </p>
+        </article>
+        <article class="companiesCard2 card">
+            <h2 id="adTitle" class="card-title teal white-text">Gestionnaire de gaffes</h2>
+            <span class="miniTitle">Ville - CreatedAt</span>
+            <h4 class="card-title teal white-text">Description</h4>
+            <p id="adDescribe">Lorem ipsum<br>
+                <h4 class="card-title teal white-text"><strong>Salaire</strong></h4><strong id="salaryAd">Enormément
+                    €</strong>.
+            </p>
+        </article>
+        <article class="companiesCard2 card">
+            <h2 id="adTitle" class="card-title teal white-text">Gestionnaire de gaffes</h2>
+            <span class="miniTitle">Ville - CreatedAt</span>
+            <h4 class="card-title teal white-text">Description</h4>
+            <p id="adDescribe">Lorem ipsum<br>
+                <h4 class="card-title teal white-text"><strong>Salaire</strong></h4><strong id="salaryAd">Enormément
+                    €</strong>.
+            </p>
+        </article>
+    </div>
+    <% }}
+    } %>
+</div>
+<%-include('partials/footer')%>
+<script type="text/javascript" src="../js/connexion.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javascript" src="../js/profil.js"></script>
+<script src="../js/companiesAdsDEPRECATED.js"></script>
+<script src="app.js"></script>

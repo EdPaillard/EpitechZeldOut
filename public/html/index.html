@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<title>ZeldOut</title>
+	</head>
+
+	<body class="grey lighten-4">
+		<header class="teal">
+			<nav class="teal">
+				<div id="navMain" class="nav-wrapper">
+					<a href="index.html"><img id="logoMain" class="left" src="../images/logo_zeldout.png" alt="Logo ZeldOut"></a>
+				      <!-- <input id="searchInput" type="text" class="browser-default searchTerm" placeholder="What are you looking for?">
+				      <button id="searchBtn" type="button" class="browser-default searchButton">
+				        <img id="loupe" src="../images/search_ico.png" alt="search icon" />
+				     </button> -->
+					<ul class="right">
+						<li class="active"><a href="index.html">Accueil</a></li>
+						<li class="active"><a href="mail.html">Messagerie</a></li>
+						<li class="active"><a href="contact.html">Contact</a></li>
+						<li id="liProfil"><img id="photoProfil" class="right circle" src="../images/edouard.png" alt="Photo de profil User">
+					      <ul id="subMenu" class="right hide-on-med-and-down">
+					        <a id="redirectProfil" class="valign-wrapper" href="profil.html"><li class="valign-wrapper">Profil</li></a>
+					        <a id="inscriptionListItem" class="valign-wrapper" href="inscription.html"><li class="valign-wrapper">S'inscrire</li></a>
+					        <a id="connectSM" href="connect.html" class="valign-wrapper"><li class="valign-wrapper">Se déconnecter</li></a>
+					      </ul>
+						</li>
+					</ul>	
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<div id="darkOverlay"></div>
+			<div id="applyBox">
+				<div id="relativApplyBox">
+					<input type="image" id="closeBtn" alt="closeBtn" src="../images/closeBtn.png" />
+					<form id="applyFormCon">
+						<label for="applyTextarea">Contacter l'entreprise</label>
+						<textarea id="applyTextarea" name="message"></textarea>
+						<input type="hidden" name="people_id"/>
+						<input class="btn" name="submit" type="submit" value="Postuler">
+					</form>
+				</div>
+			</div>
+			<div id="applyBox2">
+				<div id="relativApplyBox2">
+					<input type="image" id="closeBtn2" alt="closeBtn" src="../images/closeBtn.png" />
+					<div class="row center-align"><p>Déjà inscrit ? </p><a href="connect.html"> Connectez-vous !</a></div>
+					<form id="applyFormDisc">
+						<div class="input-field col s6">
+				          <input id="first_name" type="text" class="validate" name="tempory_firstname">
+				          <label for="first_name">Prénom</label>
+				        </div>
+				        <div class="input-field col s6">
+				          <input id="last_name" type="text" class="validate" name="tempory_lastname">
+				          <label for="last_name">Nom</label>
+				        </div>
+				      	<div class="row">
+				        	<div class="input-field col s6">
+				          		<input id="phone" type="tel" class="validate" name="tempory_phone">
+				          		<label for="phone">Téléphone</label>
+				        	</div>
+				      	</div>
+					    <div class="row">
+					        <div class="input-field col s9">
+					          	<input id="email" type="email" class="validate" name="tempory_email">
+					          	<label for="email">Email</label>
+					        </div>
+					    </div>
+					    <label for="applyTextarea2">Contacter l'entreprise</label>
+						<textarea id="fileApplyBtn" name="message"></textarea>
+						<input class="btn" name="submit" type="submit" value="Postuler">
+					</form>
+				</div>
+			</div>
+			<div id="connectAlert"><p>Pensez à vous <a href="inscription.html">inscrire</a> pour profiter pleinement de ZeldOut ! <img id="closeAlert" src="../images/closeBtn.png" style="height: 18px; width: 18px;" alt="icone de fermeture"></p></div>
+			<div id="mainMain">
+				<section id="shortInfos" class="card-panel grey lighten-3">
+					<article class="card white sidebarArtcl">
+						<div class="card-content">
+						<h2 class="card-title teal white-text">Profil</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac sagittis leo, nec accumsan elit. Praesent in sodales lacus. Donec ullamcorper ante nec dolor accumsan tempus. Cras hendrerit, nibh at facilisis commodo, est urna tincidunt est, id dignissim mi turpis in mauris.</p>
+						</div>
+						<button class="btn sidebarBtn" type="button">See more</button>
+					</article>
+					<article class="card white sidebarArtcl">
+						<div class="card-content">
+							<h2 class="card-title teal white-text">Contacts</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac sagittis leo, nec accumsan elit. Praesent in sodales lacus. Donec ullamcorper ante nec dolor accumsan tempus. Cras hendrerit, nibh at facilisis commodo, est urna tincidunt est, id dignissim mi turpis in mauris.</p>
+						</div>
+						<button class="btn sidebarBtn" type="button">See more</button>
+					</article>
+					<article class="card white sidebarArtcl">
+						<div class="card-content">
+							<h2 class="card-title teal white-text">Messagerie</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac sagittis leo, nec accumsan elit. Praesent in sodales lacus. Donec ullamcorper ante nec dolor accumsan tempus. Cras hendrerit, nibh at facilisis commodo, est urna tincidunt est, id dignissim mi turpis in mauris.</p>
+						</div>
+						<button class="btn sidebarBtn" type="button">See more</button>
+					</article>
+				</section>
+
+				
+				
+				<section id="adDisplay" class="card-panel grey lighten-3">
+					<template id ="adTemplate">
+					<article class="card">
+						<img style="padding: 5px 5px 0 0;" class="right" src="../images/fav_ico.png">
+						<form action="#" method="">
+							<div class="card-content advertizing">
+								<h2 class="card-title teal white-text valign-wrapper">Pouponeur de félins</h2>
+								<div id="advertId" class="advertsId"></div>
+								<span class="grey-text lighten-1">Dixchatons - Lille - 3 jours</span>
+								<p id="divide">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac sagittis leo, nec accumsan elit. Praesent in sodales lacus. Donec ullamcorper ante nec dolor accumsan tempus. Cras hendrerit, nibh at facilisis commodo, est urna tincidunt est, id dignissim mi turpis in mauris.</p>
+								<div class="row hidden" id="toAppend"></div>
+							</div>
+							<div class="card-action">
+								<button id="LearnMore" class="btn adBtn learnAd" href="/ads" type="button">Learn more</button>
+								<button class="btn adBtn blue applyBtn" type="button">Apply</button>
+							</div>
+						</form>
+					</article>
+				</template>
+					
+				</section>	
+			</div>		
+		</main>
+
+		<footer>
+			<address class="center-align"><a href="mailto:ed.paillard@gmail.com">Contact</a> - Tous droits réservés - Avec l'aimable participation financière du CNC</address>
+		</footer>
+		<script type="text/javascript" src="../js/connexionMain.js"></script>
+		<script src="../js/app.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script type="text/javascript" src="../js/profil.js"></script>
+		<script type="text/javascript" src="../js/applyPost.js"></script>
+	</body>
+</html>

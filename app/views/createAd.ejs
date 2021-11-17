@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="shortcut icon" href="/images/logo_zeldout.ico">
+  <title>ZeldOut</title>
+</head>
+
+<body class="grey lighten-4">
+  <header class="teal">
+    <nav class="teal">
+      <div id="navMain" class="nav-wrapper">
+        <a href="/"><img id="logoMain" class="left" src="/images/logo_zeldout.png" alt="Logo ZeldOut"></a>
+        <ul class="right">
+          <li class="active"><a href="/">Accueil</a></li>
+          <li class="active"><a href="/profil">Profil</a></li>
+          <li class="active"><a href="/logout">Se déconnecter</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="createAdMain">
+    <h4>Créer une offre d'emploi</h4>
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="intitule" type="text" class="validate">
+            <label for="intitule">Intitulé du poste</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="company_name" type="text" class="validate">
+            <label for="company_name">Nom de l'entreprise</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="ville" type="text" class="validate">
+            <label for="ville">Ville</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="salary" type="text" class="validate">
+            <label for="salary">Salaire</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <label for="description">Description du poste</label><br><br>
+            <textarea id="description" class="validate"></textarea>
+          </div>
+        </div>
+        <button class="btn right" type="submit">Ajouter une offre</button>
+      </form>
+    </div>
+  </main>
+  <%-include('partials/footer')%>

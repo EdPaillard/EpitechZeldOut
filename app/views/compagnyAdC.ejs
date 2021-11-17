@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="shortcut icon" href="/images/logo_zeldout.ico">
+    <title>ZeldOut</title>
+</head>
+
+<body class="grey lighten-4">
+    <header class="teal">
+        <nav class="teal">
+            <div id="navMain" class="nav-wrapper">
+                <a href="/"><img id="logoMain" class="left" src="/images/logo_zeldout.png" alt="Logo ZeldOut"></a>
+                <ul class="right">
+                    <li class="active"><a href="/">Accueil</a></li>
+                    <li class="active"><a href="/profil">Profil</a></li>
+                    <li class="active"><a href="/logout">Se déconnecter</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="mailMain">
+        <section class="card-panel grey lighten-3">
+            <div id="darkOverlay"></div>
+            <div id="applyBox">
+                <div id="relativApplyBox">
+                    <input type="image" id="closeBtn" alt="closeBtn" src="/images/closeBtn.png" />
+                    <form id="applyFormCon" action="http://localhost:3000/ads/1/application" method="POST">
+                        <label for="applyTextarea">Contacter l'entreprise</label>
+                        <textarea id="applyTextarea" name="message"></textarea>
+                        <input id="idInput" type="hidden" name="people_id" value="<%=locals.id%> " />
+                        <input class="btn" name="submit" type="submit" value="Postuler">
+                    </form>
+                </div>
+            </div>
+            <section id="adDisplay" class="card-panel grey lighten-3">
+                <% for (let ad of ads) { %>
+                <article class="card">
+                    <form action="#" method="">
+                        <div class="test card-content advertizing">
+                            <h2 class="card-title teal white-text valign-wrapper"><%=ad.title%></h2>
+                            <div id="advertId" class="advertsId"></div>
+                            <span class="grey-text lighten-1"><a href="/companies/<%=ad.idc%>">
+                                    <%=ad.name%></a>-<%=ad.city%> -created in <%=ad.createdAt%></span>
+                            <p id="divide"><%= ad.description %></p>
+                            <div class="laDiv row" style="display:none;">
+                                <p> Détails: <br> <%= ad.detail %></p>
+                                <p> Salary: <br> <%= ad.salary %></p>
+                            </div>
+                        </div>
+                        <div class="card-action">
+                            <button id=<%=ad.id%> class="btn adBtn learnAd" type="button">Learn more</button>
+                            <a href=#navMain id="vireLien"><button class="btn adBtn blue applyBtn" type="button"><span
+                                        class="<%=ad.id%>"> </span>Apply</button> </a>
+                        </div>
+                    </form>
+                </article>
+                <% } %>
+            </section>
+    </main>
+    <footer>
+        <address class="center-align"><a href="mailto:zeldoutworkplatform@gmail.com">Contact</a> - Tous droits réservés
+            - Avec l'aimable participation financière du CNC</address>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/js/appconnected.js"></script>
+</body>
+
+</html>

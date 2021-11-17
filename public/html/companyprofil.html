@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<title>ZeldOut</title>
+	</head>
+
+	<body class="grey lighten-4">
+		<header class="teal">
+			<nav class="teal">
+				<div id="navMain" class="nav-wrapper">
+					<a href="index.html"><img id="logoMain" class="left" src="../images/logo_zeldout.png" alt="Logo ZeldOut"></a>
+				      <input id="searchInput" type="text" class="browser-default searchTerm" placeholder="What are you looking for?">
+				      <button id="searchBtn" type="submit" class="browser-default searchButton">
+				        <img id="loupe" src="../images/search_ico.png" alt="search icon" />
+				     </button>
+					<ul class="right">
+						<li class="active"><a href="index.html">Accueil</a></li>
+						<li class="active"><a href="mail.html">Messagerie</a></li>
+						<li class="active"><a href="contact.html">Contact</a></li>
+						<li id="liProfil"><img id="photoProfil" class="right circle" src="../images/edouard.png" alt="Photo de profil User">
+					      <ul id="subMenu" class="right hide-on-med-and-down">
+					        <a id="redirectProfil" class="valign-wrapper" href="profil.html"><li class="valign-wrapper">Profil</li></a>
+					        <a id="inscriptionListItem" class="valign-wrapper" href="inscription.html"><li class="valign-wrapper">S'inscrire</li></a>
+					        <a id="connectSM" href="connect.html" class="valign-wrapper"><li class="valign-wrapper">Se déconnecter</li></a>
+					      </ul>
+						</li>
+					</ul>	
+				</div>
+			</nav>
+		</header>
+
+		<main id="companyProfilMain">
+			<ul id="manageManager" class="collection">
+		      <li id="manageProfilItem" class="collection-item manageItem">Profil</li>
+		      <li id="manageCompanyItem" class="collection-item manageItem">Entreprise</li>
+		      <li id="manageAdItem" class="collection-item manageItem">Offres d'emploi</li>
+		    </ul>
+			<section id="profilSection">
+				<div id="divmodifyBtn">
+					<a id="modifyBtn" href="modifprofil.html">Modifier</a>
+				</div>
+				<article id="profilManager">
+					<div class="card col s9 ssProfil">
+						<h3>Votre profil</h3>
+						<div id="headProfil">
+							<div class="col s2">
+								<img id="imgProfil" class="responsive-img circle" src="../images/edouardpp.png">
+							</div>
+							<div class="col s2">
+								<h2 class="card-title">Edouard PAILLARD</h2>
+							</div>
+						</div>
+					</div>
+					<div class="card ssProfil">
+						<h5 class="teal white-text">A propos de moi</h5>
+						<p>Lorem ipsum</p>
+					</div>
+					<div class="card ssProfil">
+						<h5 class="teal white-text">Ma formation</h5>
+						<p>Lorem ipsum</p>
+					</div>
+					<div class="card ssProfil">
+						<h5 class="teal white-text">Mes compétences</h5>
+						<p>Lorem ipsum</p>
+					</div>
+				</article>
+				<article id="profilCompany">
+					<div class="card col s9 ssProfil">
+						<h3>Votre Entreprise</h3>
+						<h2 class="card-title">MoulinRouge</h2>
+					</div>
+					<div class="card ssProfil">
+						<h5 class="teal white-text">Quelques mots...</h5>
+						<p>Lorem ipsum</p>
+					</div>
+					<div class="card ssProfil">
+						<h5 class="teal white-text">Contact</h5>
+						<ul>
+							<li>Siège social:</li>
+							<li>Email:</li>
+							<li>Téléphone:</li>
+						</ul>
+					</div>
+				</article>
+				<article id="profilAd">
+					<h3>Vos offres d'emploi</h3>
+					<div class="card col s9 ssProfil">
+						<h2 class="card-title">Chasseur de têtes</h2>
+					</div>
+					<div class="card ssProfil">
+						<h5 class="teal white-text">Votre mission</h5>
+						<p>Lorem ipsum</p>
+					</div>
+					<div class="card ssProfil">
+						<h5 class="teal white-text">Apply</h5>
+						<a href="#">Ecrivez-nous !</a>
+					</div>
+					<div class="card ssProfil">
+						<h5 class="teal white-text">Statut de l'offre</h5>
+						<p>Créée le *****, offre toujours d'actualité.</p>
+					</div>
+					  <a href="createAd.html" id="addAdBtn" class="valign-wrapper btn-floating btn-large waves-effect waves-light teal right">&#43;</a>
+				</article>
+			</section>
+		</main>
+
+		<footer>
+			<address class="center-align"><a href="mailto:ed.paillard@gmail.com">Contact</a> - Tous droits réservés - Avec l'aimable participation financière du CNC</address>
+		</footer>
+		<script type="text/javascript" src="../js/connexion.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script type="text/javascript" src="../js/profil.js"></script>
+		<script type="text/javascript" src="../js/companiesprofile.js"></script>
+	</body>
+</html>

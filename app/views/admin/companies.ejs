@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="shortcut icon" href="/images/logo_zeldout.ico">
+    <title>ZeldOut</title>
+</head>
+
+<body class="grey lighten-4">
+    <header class="teal">
+        <nav class="teal">
+            <div id="navMain" class="nav-wrapper">
+                <a href="/"><img id="logoZOWP" class="left" src="/images/logo_zeldout.png" alt="Logo ZeldOut"></a>
+                <ul class="right">
+                    <p id="hideout">Page d'administration de ZeldOut, le meilleur réseau professionnel de la Creuse.</p>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="sectionAdmin" id="adminSection">
+        <h2 id="titleSecAdmin">Companies</h2>
+        <h5 class='center'><a id="backAdmin" href="/admin">Retour à la page
+                d'administration</a></h5>
+        <% for(let company of companies){%>
+        <article class="<%=company.idc%>">
+            <form class="adminForm" name="companiesForm" action="/companies/<%=company.idc%>" method="POST">
+                <table class="striped centered">
+                    <tr class="grey lighten-2">
+                        <th class="teal darken-2">Numéro de l'entreprise</th>
+                        <td><%=company.idc%></td>
+                    </tr>
+                    <tr>
+                        <th class="teal">Nom</th>
+                        <td><input class="center-align black-text" name="name" disabled type="text"
+                                value="<%=company.name%>"></td>
+                    </tr>
+                    <tr class="grey lighten-2">
+                        <th class="teal darken-2">Siège social</th>
+                        <td><input class="center-align black-text" name="location" disabled type="text"
+                                value="<%=company.location%>"></td>
+                    </tr>
+                    <tr>
+                        <th class="teal">A propos de nous</th>
+                        <td><input class="center-align black-text" name="about" disabled type="text"
+                                value="<%=company.about%>"></td>
+                    </tr>
+                    <tr class="grey lighten-2">
+                        <th class="teal darken-2">Email</th>
+                        <td><input class="center-align black-text" name="email" disabled type="text"
+                                value="<%=company.email%>"></td>
+                    </tr>
+                    <tr>
+                        <th class="teal">Téléphone</th>
+                        <td><input class="center-align black-text" name="phone" disabled type="text"
+                                value="<%=company.phone%>"></td>
+                    </tr>
+                </table>
+                <div class="divBtn">
+                    <button class="btn valid" type="submit" disabled>Valider</button>
+                </div>
+            </form>
+        </article>
+        <%}%>
+    <div class="divBtn">
+        <input class="btn modify" type="button" value="Modifier"> 
+        <input class="btn delete" type="button" value="Supprimer">
+        <input class="btn create" type="button" value="Créer">
+    </div>
+    <div id="formHidden" style="display: none;">
+        <form id="suppressForm">
+            <label for="companies-delete">Choisissez le numéro de l'entreprise à supprimer</label>
+            <select class="browser-default selectDel" name="companies" id="companies-delete">
+                <% for(let company of companies){%>
+        <option name="valueId" id="optionDelete" value="<%=company.idc%>"><%=company.idc%></option>
+        <%}%>
+            </select>
+            <input class="btn" type="submit" name="subDelete" value="Confirmer" id="confirmSupr">
+        </form>
+    </div>
+    <div id="formCreateHidden" style="display: none;">
+    <form action="/companies" method="POST" accept-charset="utf-8">
+        <div class="row">
+            <div class="input-field col s6">
+                <input name="name" id="nom_entreprise" type="text" class="validate">
+                <label for="nom_entreprise">Name</label>
+            </div>
+            <div class="input-field col s6">
+                <input name="location" id="siege_social" type="text" class="validate">
+                <label for="siege_social">Siège social</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+            <input name="email" id="email" type="email" class="validate">
+            <label for="email">Courriel</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input name="phone" id="phone" maxlength="10" type="text" class="validate">
+                <label for="phone">Téléhone</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <label for="description">Présentez votre entreprise aux candidats.</label><br><br>
+                <textarea id="description" name="about" type="textarea" class="validate" style="resize: none;"></textarea>
+            </div>
+        </div>
+        <button id="createCompaBtn" type="submit" class="btn">Valider</button>
+    </form>
+    </div>
+    <h5 class='center'><a id="backAdmin" href="/admin">Retour à la page d'administration</a></h5>
+</section>
+<script src="/js/adminCRUD.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
